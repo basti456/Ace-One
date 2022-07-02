@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PassbookActivity">
+
+    <TextView
+        android:id="@+id/txtPassbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="Passbook,"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_active_loans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="0.3"
+        android:text="ACTIVE LOANS"
+        android:textColor="#7F7F7F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPassbook" />
+
+    <TextView
+        android:id="@+id/active_loans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_active"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintLeft_toRightOf="@id/txt_active_loans"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPassbook" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_active_loans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_pay_details"
+        android:elevation="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_active_loans">
+
+
+        <TextView
+            android:id="@+id/txtCreditSummary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_active_loan"
+            android:gravity="center"
+            android:letterSpacing="0.5"
+            android:text="ACTIVE"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toTopOf="@id/cl_active_loans" />
+
+        <TextView
+            android:id="@+id/txtEMIDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="EMI Due"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtCreditSummary" />
+
+        <TextView
+            android:id="@+id/txt_emi_due_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="INR 330.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtEMIDue" />
+
+        <TextView
+            android:id="@+id/due_in"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_pay_now"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Due in 20 days"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintLeft_toRightOf="@id/txtEMIDue"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtCreditSummary" />
+
+
+        <TextView
+            android:id="@+id/txt_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Due Date"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_emi_due_amount" />
+
+        <TextView
+            android:id="@+id/due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="5dp"
+            android:text="10 June, 2022"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_due_date" />
+
+        <TextView
+            android:id="@+id/txt_emi_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:text="EMI Remaining"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.694"
+            app:layout_constraintLeft_toRightOf="@id/txt_due_date"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/due_in" />
+
+        <TextView
+            android:id="@+id/emi_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:text="2 EMIs"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintLeft_toRightOf="@id/due_date"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_emi_remaining" />
+
+        <Button
+            android:id="@+id/btn_details"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/bg_details"
+            android:elevation="2dp"
+            android:text="Details"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/cl_active_loans"
+            app:layout_constraintLeft_toLeftOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/due_date" />
+
+        <Button
+            android:id="@+id/btn_pay_now"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/bg_now"
+            android:elevation="2dp"
+            android:text="Pay Now"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/cl_active_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_active_loans"
+            app:layout_constraintTop_toBottomOf="@id/emi_remaining" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_closed_loans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_pay_details"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_active_loans">
+
+
+        <TextView
+            android:id="@+id/txtClosedCreditSummary"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_pay_now"
+            android:gravity="center"
+            android:letterSpacing="0.5"
+            android:text="CLOSED"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toTopOf="@id/cl_closed_loans" />
+
+        <TextView
+            android:id="@+id/txtClosedEMIDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="EMI Due"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtClosedCreditSummary" />
+
+        <TextView
+            android:id="@+id/txt_closed_emi_due_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="INR 330.00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtClosedEMIDue" />
+
+        <TextView
+            android:id="@+id/closed_due_in"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_pay_now"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Due in 20 days"
+            android:textColor="#7F7F7F"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.908"
+            app:layout_constraintLeft_toRightOf="@id/txtClosedEMIDue"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txtClosedCreditSummary" />
+
+
+        <TextView
+            android:id="@+id/txt_closed_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Due Date"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_closed_emi_due_amount" />
+
+        <TextView
+            android:id="@+id/closed_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="5dp"
+            android:text="10 June, 2022"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_closed_due_date" />
+
+        <TextView
+            android:id="@+id/txt_closed_emi_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp"
+            android:text="EMI Remaining"
+            android:textColor="#7E7E7E"
+            android:textSize="12sp"
+            app:layout_constraintHorizontal_bias="0.694"
+            app:layout_constraintLeft_toRightOf="@id/txt_closed_due_date"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/closed_due_in" />
+
+        <TextView
+            android:id="@+id/closed_emi_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:text="2 EMIs"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintLeft_toRightOf="@id/closed_due_date"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/txt_closed_emi_remaining" />
+
+        <Button
+            android:id="@+id/btn_closed_details"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/bg_details"
+            android:elevation="2dp"
+            android:text="Details"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/cl_closed_loans"
+            app:layout_constraintLeft_toLeftOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/closed_due_date" />
+
+        <ImageView
+            android:id="@+id/img_check_it"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:elevation="2dp"
+            android:src="@drawable/ic_check"
+            android:text="Pay Now"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@id/cl_closed_loans"
+            app:layout_constraintRight_toRightOf="@id/cl_closed_loans"
+            app:layout_constraintTop_toBottomOf="@id/closed_emi_remaining" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/allRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="All Rights Reserved, Ace Services &amp; Associates, 2022"
+        android:textColor="#7E7E7E"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
