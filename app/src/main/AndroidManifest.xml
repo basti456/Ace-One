@@ -12,12 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeActivity">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".RequestLoanActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".KycActivity" />
         <activity android:name=".LoanDetailsActivity" />
+        <activity android:name=".CreditActivity" />
+        <activity android:name=".RequestLoanActivity" />
         <activity android:name=".ApprovedActivity" />
         <activity android:name=".PassbookActivity" />
-        <activity android:name=".CreditActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
